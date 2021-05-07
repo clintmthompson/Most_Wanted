@@ -42,6 +42,7 @@ let firstTable = people.map(function(el){
 let newTable = searchByName()
 
 function getNewTable(){
+    document.getElementById("data").innerHTML = ''
 newTable.map(function(el){
     document.getElementById("data").innerHTML += `<tr>
         <td>${el.id}</td>
@@ -58,6 +59,4 @@ newTable.map(function(el){
     </tr>`
 })
 }
-
-
 

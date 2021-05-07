@@ -36,3 +36,42 @@ people.map(function(el){
         <td>${el.currentSpouse}</td>
     </tr>`
 })
+
+
+//Storing specific contents of array in new variables by type
+
+let listIds = people.map(function(el){
+    return(el.id)
+})
+let lisFirstName = people.map(function(el){
+    return(el.firstName)
+})
+let listLastName = people.map(function(el){
+    return(el.lastName)
+})
+let listGender = people.map(function(el){
+    return(el.gender)
+})
+let listDob = people.map(function(el){
+    return(el.dob)
+})
+let listHeight = people.map(function(el){
+    return(el.height)
+})
+let listWeight = people.map(function(el){
+    return(el.weight)
+})
+let listEyeColor = people.map(function(el){
+    return(el.eyeColor)
+})
+let listOccupation = people.map(function(el){
+    return(el.occupation)
+})
+let listParents = people.map(function(el){
+    return(el.parents)
+})
+let listCurrentSpouse = people.map(function(el){
+    return(el.currentSpouse)
+})
+
+console.log(listOccupation[0]) //testing calling a specific index from stored array

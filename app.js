@@ -34,6 +34,7 @@ let firstTable = people.map(function(el){
         <td>${el.occupation}</td>
         <td>${el.parents}</td>
         <td>${el.currentSpouse}</td>
+        <td>${el.children}</td>
     </tr>`
 })
 
@@ -55,6 +56,7 @@ newTable.map(function(el){
         <td>${el.occupation}</td>
         <td>${el.parents}</td>
         <td>${el.currentSpouse}</td>
+        <td>${el.children}</td>
     </tr>`
 })
 }
@@ -93,6 +95,7 @@ let birthdayTable = people.map(function(el){
         <td>${el.occupation}</td>
         <td>${el.parents}</td>
         <td>${el.currentSpouse}</td>
+        <td>${el.children}</td>
     </tr>`
 })
 
@@ -101,17 +104,19 @@ function getNewBirthdayTable(){
     document.getElementById("birthdayTable").innerHTML = ''
 newBirthdayTable.map(function(el){
     document.getElementById("birthdayTable").innerHTML += `<tr>
-        <td>${el.id}</td>
-        <td>${el.firstName}</td>
-        <td>${el.lastName}</td>
-        <td>${el.gender}</td>
-        <td>${el.dob}</td>
-        <td>${el.height}</td>
-        <td>${el.weight}</td>
-        <td>${el.eyeColor}</td>
-        <td>${el.occupation}</td>
-        <td>${el.parents}</td>
-        <td>${el.currentSpouse}</td>
+            <td>${el.id}</td>
+            <td>${el.firstName}</td>
+            <td>${el.lastName}</td>
+            <td>${el.gender}</td>
+            <td>${el.dob}</td>
+            <td>${el.height}</td>
+            <td>${el.weight}</td>
+            <td>${el.eyeColor}</td>
+            <td>${el.occupation}</td>
+            <td>${el.parents}</td>
+            <td>${el.currentSpouse}</td>
+            <td>${el.children}</td>
     </tr>`
 })
 }
+

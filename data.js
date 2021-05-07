@@ -11,7 +11,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "programmer",
 		"parents": [],
-		"currentSpouse": 401222887
+		"currentSpouse": 401222887,
+		"children": []
 	},
 	{
 		"id": 401222887,
@@ -24,7 +25,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "assistant",
 		"parents": [],
-		"currentSpouse": 272822514
+		"currentSpouse": 272822514,
+		"children": [878013758, 951747547]
 	},
 	{
 		"id": 409574486,
@@ -37,7 +39,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "landscaper",
 		"parents": [],
-		"currentSpouse": 260451248
+		"currentSpouse": 260451248,
+		"children": [159819275]
 	},
 	{
 		"id": 260451248,
@@ -50,7 +53,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "assistant",
 		"parents": [],
-		"currentSpouse": 409574486
+		"currentSpouse": 409574486,
+		"children": [159819275]
 	},
 	{
 		"id": 629807187,
@@ -63,7 +67,8 @@ const people = [
 		"eyeColor": "black",
 		"occupation": "nurse",
 		"parents": [],
-		"currentSpouse": 464142841
+		"currentSpouse": 464142841,
+		"children": [348457184, 294874671, 931247228]
 	},
 	{
 		"id": 464142841,
@@ -76,7 +81,8 @@ const people = [
 		"eyeColor": "black",
 		"occupation": "student",
 		"parents": [],
-		"currentSpouse": 629807187
+		"currentSpouse": 629807187,
+		"children": [348457184, 294874671, 931247228]
 	},
 	{
 		"id": 982411429,
@@ -89,7 +95,8 @@ const people = [
 		"eyeColor": "hazel",
 		"occupation": "architect",
 		"parents": [],
-		"currentSpouse": 595767575
+		"currentSpouse": 595767575,
+		"children": []
 	},
 	{
 		"id": 595767575,
@@ -102,7 +109,8 @@ const people = [
 		"eyeColor": "blue",
 		"occupation": "architect",
 		"parents": [],
-		"currentSpouse": 982411429
+		"currentSpouse": 982411429,
+		"children": []
 	},
 	{
 		"id": 693243224,
@@ -115,7 +123,8 @@ const people = [
 		"eyeColor": "hazel",
 		"occupation": "doctor",
 		"parents": [],
-		"currentSpouse": null
+		"currentSpouse": null,
+		"children": [822843554, 819168108, 969837479, 313207561]
 	},
 	{
 		"id": 888201200,
@@ -128,7 +137,8 @@ const people = [
 		"eyeColor": "black",
 		"occupation": "landscaper",
 		"parents": [],
-		"currentSpouse": null
+		"currentSpouse": null,
+		"children": [822843554, 819168108, 969837479, 313207561]
 	},
 	{
 		"id": 878013758,
@@ -141,7 +151,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "programmer",
 		"parents": [401222887],
-		"currentSpouse": 294874671
+		"currentSpouse": 294874671,
+		"children": []
 	},
 	{
 		"id": 951747547,
@@ -154,7 +165,8 @@ const people = [
 		"eyeColor": "blue",
 		"occupation": "nurse",
 		"parents": [401222887],
-		"currentSpouse": 159819275
+		"currentSpouse": 159819275,
+		"children": []
 	},
 	{
 		"id": 159819275,
@@ -167,7 +179,8 @@ const people = [
 		"eyeColor": "blue",
 		"occupation": "assistant",
 		"parents": [409574486, 260451248],
-		"currentSpouse": 951747547
+		"currentSpouse": 951747547,
+		"children": []
 	},
 	{
 		"id": 348457184,
@@ -180,7 +193,8 @@ const people = [
 		"eyeColor": "hazel",
 		"occupation": "landscaper",
 		"parents": [629807187, 464142841],
-		"currentSpouse": null
+		"currentSpouse": null,
+		"children": []
 	},
 	{
 		"id": 294874671,
@@ -193,7 +207,8 @@ const people = [
 		"eyeColor": "green",
 		"occupation": "doctor",
 		"parents": [629807187, 464142841],
-		"currentSpouse": 878013758
+		"currentSpouse": 878013758,
+		"children": []
 	},
 	{
 		"id": 931247228,
@@ -206,7 +221,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "landscaper",
 		"parents": [629807187, 464142841],
-		"currentSpouse": null
+		"currentSpouse": null,
+		"children": []
 	},
 	{
 		"id": 822843554,
@@ -219,7 +235,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "nurse",
 		"parents": [693243224, 888201200],
-		"currentSpouse": null
+		"currentSpouse": null,
+		"children": []
 	},
 	{
 		"id": 819168108,
@@ -232,7 +249,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "politician",
 		"parents": [693243224, 888201200],
-		"currentSpouse": null
+		"currentSpouse": null,
+		"children": []
 	},
 	{
 		"id": 969837479,
@@ -245,7 +263,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "assistant",
 		"parents": [693243224, 888201200],
-		"currentSpouse": null
+		"currentSpouse": null,
+		"children": []
 	},
 	{
 		"id": 313207561,
@@ -258,7 +277,8 @@ const people = [
 		"eyeColor": "blue",
 		"occupation": "assistant",
 		"parents": [693243224, 888201200],
-		"currentSpouse": 313997561
+		"currentSpouse": 313997561,
+		"children": [313998000]
 	},
 	{
 		"id": 313997561,
@@ -271,7 +291,8 @@ const people = [
 		"eyeColor": "blue",
 		"occupation": "doctor",
 		"parents": [],
-		"currentSpouse": 313207561
+		"currentSpouse": 313207561,
+		"children": [313998000]
 	},
 	{
 		"id": 313998000,
@@ -284,6 +305,7 @@ const people = [
 		"eyeColor": "blue",
 		"occupation": "doctor",
 		"parents": [313207561, 313997561],
-		"currentSpouse": null
+		"currentSpouse": null,
+		"children": []
 	}
 ];

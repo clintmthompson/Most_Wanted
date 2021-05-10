@@ -1,13 +1,13 @@
 'use strict';
 
-function searchByName(){
+function searchByHeightWeight(){
     // Grabbing the values from our nameForm form and inputs.
-    let firstNameInput = document.forms['nameForm']['fname'].value;
-    let lastNameInput = document.forms['nameForm']['lname'].value;
+    let heightInput = document.forms['heightWeightForm']['height'].value;
+    let weightInput = document.forms['heightWeightForm']['weight'].value;
 
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
     let filteredPeople = people.filter(function (person) {
-        if(person.firstName === firstNameInput && person.lastName === lastNameInput){
+        if(person.height == heightInput && person.weight == weightInput){
             return true;
         }
         return false;
@@ -17,7 +17,7 @@ function searchByName(){
     if(filteredPeople.length > 0){
         return(filteredPeople);
     }else{
-        alert('Sorry, looks like there is no one with that name. Please try again.');
+        alert('Sorry, looks like there is no match. Please try again.');
     }
 }
 
@@ -41,7 +41,7 @@ let firstTable = people.map(function(el){
 
 
 function getNewTable(){
-    let newTable= searchByName();
+    let newTable= searchByHeightWeight();
     document.getElementById("data").innerHTML = ''
 newTable.map(function(el){
     document.getElementById("data").innerHTML += `<tr>

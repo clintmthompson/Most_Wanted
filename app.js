@@ -33,6 +33,7 @@ let firstTable = people.map(function(el){
         <td>${el.parents}</td>
         <td>${el.currentSpouse}</td>
         <td>${el.children}</td>
+        <td>${el.grandchildren}</td>
     </tr>`
 })
 
@@ -55,6 +56,7 @@ newTable.map(function(el){
         <td>${el.parents}</td>
         <td>${el.currentSpouse}</td>
         <td>${el.children}</td>
+        <td>${el.grandchildren}</td>
     </tr>`
 })
 }
@@ -94,12 +96,14 @@ let birthdayTable = people.map(function(el){
         <td>${el.parents}</td>
         <td>${el.currentSpouse}</td>
         <td>${el.children}</td>
+        <td>${el.grandchildren}</td>
     </tr>`
 })
 
+
+
 function getNewBirthdayTable(){
     let newBirthdayTable= searchByDob();
-    console.log(newBirthdayTable)
     document.getElementById("birthdayTable").innerHTML = ''
 newBirthdayTable.map(function(el){
     document.getElementById("birthdayTable").innerHTML += `<tr>
@@ -115,7 +119,9 @@ newBirthdayTable.map(function(el){
             <td>${el.parents}</td>
             <td>${el.currentSpouse}</td>
             <td>${el.children}</td>
+            <td>${el.grandchildren}</td>
     </tr>`
 })
 }
+
 

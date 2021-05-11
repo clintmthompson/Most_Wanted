@@ -1,5 +1,26 @@
 'use strict';
 
+function getPersonById(idInput){
+    let foundPerson = people.filter(function (person){
+        if(person.id == idInput){ 
+            return true
+        }
+        else{
+            return false;
+        }
+    
+    })
+    if(foundPerson[0] !== undefined){
+    return(foundPerson[0].firstName)
+    }
+    else{
+        return(" ")
+    }
+    
+}
+
+getPersonById(people[0].currentSpouse)
+
 function searchByHeightWeight(){
     let heightInput = document.forms['heightWeightForm']['height'].value;
     let weightInput = document.forms['heightWeightForm']['weight'].value;
@@ -12,6 +33,7 @@ function searchByHeightWeight(){
         return false;
     });
     
+
     if(filteredPeople.length > 0){
         return(filteredPeople);
     }else{
@@ -31,7 +53,7 @@ let firstTable = people.map(function(el){
         <td>${el.eyeColor}</td>
         <td>${el.occupation}</td>
         <td>${el.parents}</td>
-        <td>${el.currentSpouse}</td>
+        <td>${getPersonById(el.currentSpouse)}</td>
         <td>${el.children}</td>
         <td>${el.grandchildren}</td>
     </tr>`
@@ -54,7 +76,7 @@ newTable.map(function(el){
         <td>${el.eyeColor}</td>
         <td>${el.occupation}</td>
         <td>${el.parents}</td>
-        <td>${el.currentSpouse}</td>
+        <td>${getPersonById(el.currentSpouse)}</td>
         <td>${el.children}</td>
         <td>${el.grandchildren}</td>
     </tr>`
@@ -123,5 +145,9 @@ newBirthdayTable.map(function(el){
     </tr>`
 })
 }
+
+
+
+
 
 

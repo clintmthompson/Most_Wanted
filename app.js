@@ -58,6 +58,7 @@ let firstTable = people.map(function(el){
         <td>${getPersonById(el.currentSpouse)}</td>
         <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
         <td>${getPersonById(el.grandchildren)}</td>
+        <td>${getPersonById(el.siblings[0]) + "  " + getPersonById(el.siblings[1]) + "  " + getPersonById(el.siblings[2]) + "  " + getPersonById(el.siblings[3])}</td>
     </tr>`
 })
 
@@ -81,6 +82,7 @@ newTable.map(function(el){
         <td>${getPersonById(el.currentSpouse)}</td>
         <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
         <td>${getPersonById(el.grandchildren)}</td>
+        <td>${getPersonById(el.siblings[0]) + "  " + getPersonById(el.siblings[1]) + "  " + getPersonById(el.siblings[2]) + "  " + getPersonById(el.siblings[3])}</td>
     </tr>`
 })
 }
@@ -121,6 +123,7 @@ let birthdayTable = people.map(function(el){
         <td>${getPersonById(el.currentSpouse)}</td>
         <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
         <td>${getPersonById(el.grandchildren)}</td>
+        <td>${getPersonById(el.siblings[0]) + "  " + getPersonById(el.siblings[1]) + "  " + getPersonById(el.siblings[2]) + "  " + getPersonById(el.siblings[3])}</td>
     </tr>`
 })
 
@@ -144,6 +147,7 @@ newBirthdayTable.map(function(el){
         <td>${getPersonById(el.currentSpouse)}</td>
         <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
         <td>${getPersonById(el.grandchildren)}</td>
+        <td>${getPersonById(el.siblings[0]) + "  " + getPersonById(el.siblings[1]) + "  " + getPersonById(el.siblings[2]) + "  " + getPersonById(el.siblings[3])}</td>
     </tr>`
 })
 }

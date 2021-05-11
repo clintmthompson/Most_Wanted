@@ -13,7 +13,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": 401222887,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	},
 	{
 		"id": 401222887,
@@ -28,7 +29,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": 272822514,
 		"children": [878013758, 951747547],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	},
 	{
 		"id": 409574486,
@@ -43,7 +45,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": 260451248,
 		"children": [159819275],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	},
 	{
 		"id": 260451248,
@@ -58,7 +61,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": 409574486,
 		"children": [159819275],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	},
 	{
 		"id": 629807187,
@@ -73,7 +77,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": 464142841,
 		"children": [348457184, 294874671, 931247228],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	},
 	{
 		"id": 464142841,
@@ -88,7 +93,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": 629807187,
 		"children": [348457184, 294874671, 931247228],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	},
 	{
 		"id": 982411429,
@@ -103,7 +109,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": 595767575,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	},
 	{
 		"id": 595767575,
@@ -118,7 +125,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": 982411429,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	},
 	{
 		"id": 693243224,
@@ -133,7 +141,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": null,
 		"children": [822843554, 819168108, 969837479, 313207561],
-		"grandchildren":[313998000]
+		"grandchildren":[313998000],
+		"siblings":[]
 	},
 	{
 		"id": 888201200,
@@ -148,7 +157,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": null,
 		"children": [822843554, 819168108, 969837479, 313207561],
-		"grandchildren":[313998000]
+		"grandchildren":[313998000],
+		"siblings":[]
 	},
 	{
 		"id": 878013758,
@@ -163,7 +173,8 @@ const people = [
 		"parents": [401222887],
 		"currentSpouse": 294874671,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[951747547]
 	},
 	{
 		"id": 951747547,
@@ -178,7 +189,8 @@ const people = [
 		"parents": [401222887],
 		"currentSpouse": 159819275,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[878013758]
 	},
 	{
 		"id": 159819275,
@@ -193,7 +205,8 @@ const people = [
 		"parents": [409574486, 260451248],
 		"currentSpouse": 951747547,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	},
 	{
 		"id": 348457184,
@@ -208,7 +221,8 @@ const people = [
 		"parents": [629807187, 464142841],
 		"currentSpouse": null,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[294874671, 931247228]
 	},
 	{
 		"id": 294874671,
@@ -223,7 +237,8 @@ const people = [
 		"parents": [629807187, 464142841],
 		"currentSpouse": 878013758,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[348457184, 931247228]
 	},
 	{
 		"id": 931247228,
@@ -238,7 +253,8 @@ const people = [
 		"parents": [629807187, 464142841],
 		"currentSpouse": null,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[348457184, 294874671]
 	},
 	{
 		"id": 822843554,
@@ -253,7 +269,8 @@ const people = [
 		"parents": [693243224, 888201200],
 		"currentSpouse": null,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[819168108, 969837479, 313207561]
 	},
 	{
 		"id": 819168108,
@@ -268,7 +285,8 @@ const people = [
 		"parents": [693243224, 888201200],
 		"currentSpouse": null,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[822843554, 969837479, 313207561]
 	},
 	{
 		"id": 969837479,
@@ -283,7 +301,8 @@ const people = [
 		"parents": [693243224, 888201200],
 		"currentSpouse": null,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[822843554, 819168108, 313207561]
 	},
 	{
 		"id": 313207561,
@@ -298,7 +317,8 @@ const people = [
 		"parents": [693243224, 888201200],
 		"currentSpouse": 313997561,
 		"children": [313998000],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[822843554, 819168108, 969837479]
 	},
 	{
 		"id": 313997561,
@@ -313,7 +333,8 @@ const people = [
 		"parents": [],
 		"currentSpouse": 313207561,
 		"children": [313998000],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	},
 	{
 		"id": 313998000,
@@ -328,6 +349,7 @@ const people = [
 		"parents": [313207561, 313997561],
 		"currentSpouse": null,
 		"children": [],
-		"grandchildren":[]
+		"grandchildren":[],
+		"siblings":[]
 	}
 ];

@@ -2,18 +2,41 @@
 }
 
 body {
+	background-color: black;
+	color: white;
+}
+
+.picture {
+}
+
+.picture__police {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.pageTitle {
+	text-align: center;
+	color: red;
+}
+
+.pageTitle__head {
 }
 
 .heightWeightForm {
+	text-align: center;
 }
 
 .heightWeightForm__heightLable {
+	color: red;
 }
 
 .heightWeightForm__heightInput {
 }
 
 .heightWeightForm__weightLable {
+	color: red;
 }
 
 .heightWeightForm__weightInput {
@@ -26,9 +49,13 @@ body {
 }
 
 .tableOne__head {
+	color: red;
+	text-align: center;
 }
 
 .tableOne__table {
+	border: 1px solid green;
+	width: 100%;
 }
 
 .tableOne__table__head {
@@ -44,9 +71,11 @@ body {
 }
 
 .dobForm {
+	text-align: center;
 }
 
 .dobForm__lable {
+	color: red;
 }
 
 .dobForm__input {
@@ -59,9 +88,13 @@ body {
 }
 
 .tableTwo__head {
+	color: red;
+	text-align: center;
 }
 
 .tableTwo__table {
+	border: 1px solid green;
+	width: 100%;
 }
 
 .tableTwo__table__head {

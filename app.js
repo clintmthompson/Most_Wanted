@@ -14,13 +14,13 @@ function getPersonById(idInput){
     })
 
     if(foundPerson[0] !== undefined){
-    return(foundPerson[0].firstName + " " + foundPerson[0].lastName)
+    return(foundPerson[0].firstName + " " + foundPerson[0].lastName + ",")
     }
     else{
         return(" ")
     }
 }
-console.log(people[1].children)
+
 
 
 function searchByHeightWeight(){
@@ -54,9 +54,9 @@ let firstTable = people.map(function(el){
         <td>${el.weight}</td>
         <td>${el.eyeColor}</td>
         <td>${el.occupation}</td>
-        <td>${getPersonById(el.parents[0]) + ",  " + getPersonById(el.parents[1])}</td>
+        <td>${getPersonById(el.parents[0]) + "  " + getPersonById(el.parents[1])}</td>
         <td>${getPersonById(el.currentSpouse)}</td>
-        <td>${getPersonById(el.children[0]) + ",   " + getPersonById(el.children[1]) + ",   " + getPersonById(el.children[2]) + ",   " + getPersonById(el.children[3])}</td>
+        <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
         <td>${getPersonById(el.grandchildren)}</td>
     </tr>`
 })
@@ -79,7 +79,7 @@ newTable.map(function(el){
         <td>${el.occupation}</td>
         <td>${getPersonById(el.parents[0]) + "  " + getPersonById(el.parents[1])}</td>
         <td>${getPersonById(el.currentSpouse)}</td>
-        <td>${getPersonById(el.children[0]) + ",   " + getPersonById(el.children[1]) + ",   " + getPersonById(el.children[2]) + ",   " + getPersonById(el.children[3])}</td>
+        <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
         <td>${getPersonById(el.grandchildren)}</td>
     </tr>`
 })
@@ -119,7 +119,7 @@ let birthdayTable = people.map(function(el){
         <td>${el.occupation}</td>
         <td>${getPersonById(el.parents[0]) + "  " + getPersonById(el.parents[1])}</td>
         <td>${getPersonById(el.currentSpouse)}</td>
-        <td>${getPersonById(el.children[0]) + ",   " + getPersonById(el.children[1]) + ",   " + getPersonById(el.children[2]) + ",   " + getPersonById(el.children[3])}</td>
+        <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
         <td>${getPersonById(el.grandchildren)}</td>
     </tr>`
 })
@@ -142,7 +142,7 @@ newBirthdayTable.map(function(el){
         <td>${el.occupation}</td>
         <td>${getPersonById(el.parents[0]) + "  " + getPersonById(el.parents[1])}</td>
         <td>${getPersonById(el.currentSpouse)}</td>
-        <td>${getPersonById(el.children[0]) + ",   " + getPersonById(el.children[1]) + ",   " + getPersonById(el.children[2]) + ",   " + getPersonById(el.children[3])}</td>
+        <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
         <td>${getPersonById(el.grandchildren)}</td>
     </tr>`
 })

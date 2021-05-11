@@ -7,37 +7,37 @@
     <link rel="stylesheet" href="styleSheet.css">
   </head>
   <body>
-    <form id="heightWeightForm">
-        <label for="height">Height:</label><br>
-        <input type="text" id="height" name="height" value="71"><br>
-        <label for="weight">Weight:</label><br>
-        <input type="text" id="weight" name="weight" value="175"><br><br>
-        <input id="button" type="button" onclick="getNewTable()" value="Submit">
+    <form id="heightWeightForm" class="heightWeightForm">
+        <label for="height" class="heightWeightForm__heightLable">Height:</label><br>
+        <input type="text" id="height" name="height" value="71" class="heightWeightForm__heightInput"><br>
+        <label for="weight" class="heightWeightForm__weightLable">Weight:</label><br>
+        <input type="text" id="weight" name="weight" value="175" class="heightWeightForm__weightInput"><br><br>
+        <input id="button" type="button" onclick="getNewTable()" value="Submit" class="heightWeightForm__button">
     </form> 
 
       
-   <div>
-    <h2>Search By Height and Weight</h2>
-    <table border= 1>
-      <thead>
-       <tr>
-         <th>ID</th>
-         <th>First Name</th>
-         <th>Last Name</th>
-         <th>Gender</th>
-         <th>DOB</th>
-         <th>Height</th>
-         <th>Weight</th>
-         <th>Eye Color</th>
-         <th>Occupation</th>
-         <th>Parents</th>
-         <th>Current Spouse</th>
-         <th>Children</th>
-         <th>Grandchildren</th>
-         <th>Siblings</th>
+   <div class="tableOne">
+    <h2 class="tableOne__head">Search By Height and Weight</h2>
+    <table border= 1 class="tableOne__table">
+      <thead class="tableOne__table__head">
+       <tr class="tableOne__table__head__row">
+         <th class="tableOne__table__head__row__head">ID</th>
+         <th class="tableOne__table__head__row__head">First Name</th>
+         <th class="tableOne__table__head__row__head">Last Name</th>
+         <th class="tableOne__table__head__row__head">Gender</th>
+         <th class="tableOne__table__head__row__head">DOB</th>
+         <th class="tableOne__table__head__row__head">Height</th>
+         <th class="tableOne__table__head__row__head">Weight</th>
+         <th class="tableOne__table__head__row__head">Eye Color</th>
+         <th class="tableOne__table__head__row__head">Occupation</th>
+         <th class="tableOne__table__head__row__head">Parents</th>
+         <th class="tableOne__table__head__row__head">Current Spouse</th>
+         <th class="tableOne__table__head__row__head">Children</th>
+         <th class="tableOne__table__head__row__head">Grandchildren</th>
+         <th class="tableOne__table__head__row__head">Siblings</th>
        </tr>
       </thead>
-      <tbody id = "data">
+      <tbody id = "data" class="tableOne__table__body">
 
       </tbody>
      </table>
@@ -46,34 +46,34 @@
    
    
    <br><br><br><br>
-   <form id="dobForm">
-     <label for="dob">Date of Birth:</label><br>
-     <input type="text" id="dob" name="dob" value="5/6/1937"><br><br>
-     <input id="dobButton" type="button" onclick="getNewBirthdayTable()" value="Submit">
+   <form id="dobForm" class="dobForm">
+     <label for="dob" class="dobForm__lable">Date of Birth:</label><br>
+     <input type="text" id="dob" name="dob" value="5/6/1937" class="dobForm__input"><br><br>
+     <input id="dobButton" type="button" onclick="getNewBirthdayTable()" value="Submit" class="dobForm__button">
  </form> 
     
- <div>
-  <h2>Search By Birthday</h2>
-  <table border= 1>
-    <thead>
-     <tr>
-       <th>ID</th>
-       <th>First Name</th>
-       <th>Last Name</th>
-       <th>Gender</th>
-       <th>DOB</th>
-       <th>Height</th>
-       <th>Weight</th>
-       <th>Eye Color</th>
-       <th>Occupation</th>
-       <th>Parents</th>
-       <th>Current Spouse</th>
-       <th>Children</th>
-       <th>Grandchildren</th>
-       <th>Siblings</th>
+ <div class="tableTwo">
+  <h2 class="tableTwo__head">Search By Birthday</h2>
+  <table border= 1 class="tableTwo__table">
+    <thead class="tableTwo__table__head">
+     <tr class="tableTwo__table__head__row">
+       <th class="tableTwo__table__head__row__head">ID</th>
+       <th class="tableTwo__table__head__row__head">First Name</th>
+       <th class="tableTwo__table__head__row__head">Last Name</th>
+       <th class="tableTwo__table__head__row__head">Gender</th>
+       <th class="tableTwo__table__head__row__head">DOB</th>
+       <th class="tableTwo__table__head__row__head">Height</th>
+       <th class="tableTwo__table__head__row__head">Weight</th>
+       <th class="tableTwo__table__head__row__head">Eye Color</th>
+       <th class="tableTwo__table__head__row__head">Occupation</th>
+       <th class="tableTwo__table__head__row__head">Parents</th>
+       <th class="tableTwo__table__head__row__head">Current Spouse</th>
+       <th class="tableTwo__table__head__row__head">Children</th>
+       <th class="tableTwo__table__head__row__head">Grandchildren</th>
+       <th class="tableTwo__table__head__row__head">Siblings</th>
      </tr>
     </thead>
-    <tbody id = "birthdayTable">
+    <tbody id = "birthdayTable" class="tableTwo__table__body">
 
     </tbody>
    </table>
@@ -81,6 +81,6 @@
      
     
     <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js" class="js"></script>
   </body>
 </html>

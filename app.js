@@ -52,11 +52,11 @@ function clearTable(table){
 
 
 //Function to Generate Table 1 (Height/Weight)
-function heightTable(arrayInput){
+function makeTable(arrayInput, chosenTable){
 
 
     arrayInput.map(function(el){
-        document.getElementById("data").innerHTML += `<tr>
+        document.getElementById(chosenTable).innerHTML += `<tr>
         <td>${el.id}</td>
         <td>${el.firstName}</td>
         <td>${el.lastName}</td>
@@ -74,13 +74,13 @@ function heightTable(arrayInput){
 }
 
 //Initial Generation of Table 1
-heightTable(people)
+makeTable(people, "data")
 
 //Updates Table 1 based on search results
 document.getElementById("button").onclick = function(){
     clearTable("data");
     let heightWeightArray = searchByHeightWeight()
-    heightTable(heightWeightArray);
+    makeTable(heightWeightArray, "data");
 }
 
 
@@ -107,36 +107,15 @@ function searchByDob(){
     }
 }
 
-//Function to Generate Table 2 (Date of Birth)
-function birthdayTable(arrayInput){
-
-
-    arrayInput.map(function(el){
-        document.getElementById("birthdayTable").innerHTML += `<tr>
-        <td>${el.id}</td>
-        <td>${el.firstName}</td>
-        <td>${el.lastName}</td>
-        <td>${el.gender}</td>
-        <td>${el.dob}</td>
-        <td>${el.height}</td>
-        <td>${el.weight}</td>
-        <td>${el.eyeColor}</td>
-        <td>${el.occupation}</td>
-        <td>${(el.parents)}</td>
-        <td>${(el.currentSpouse)}</td>
-        </tr>`
-})
-}
-
 //Initial generation of Table 2
-birthdayTable(people)
+makeTable(people, "birthdayTable")
 
 
 //Updates Table 2 based on search results
 document.getElementById("dobButton").onclick = function(){
     clearTable("birthdayTable");
     let dobArray = searchByDob()
-    birthdayTable(dobArray);
+    makeTable(dobArray, "birthdayTable");
 }
 
 

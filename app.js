@@ -1,5 +1,7 @@
 'use strict';
 
+
+//Displays names in place of ID's
 function getPersonById(idInput){
     let foundPerson = people.filter(function (person){
         
@@ -22,7 +24,7 @@ function getPersonById(idInput){
 }
 
 
-
+//Returns an array of people matching the search criterea for height/weight
 function searchByHeightWeight(){
     let heightInput = document.forms['heightWeightForm']['height'].value;
     let weightInput = document.forms['heightWeightForm']['weight'].value;
@@ -43,51 +45,48 @@ function searchByHeightWeight(){
     }
 }
 
-let firstTable = people.map(function(el){
-    document.getElementById("data").innerHTML += `<tr>
-        <td>${el.id}</td>
-        <td>${el.firstName}</td>
-        <td>${el.lastName}</td>
-        <td>${el.gender}</td>
-        <td>${el.dob}</td>
-        <td>${el.height}</td>
-        <td>${el.weight}</td>
-        <td>${el.eyeColor}</td>
-        <td>${el.occupation}</td>
-        <td>${getPersonById(el.parents[0]) + "  " + getPersonById(el.parents[1])}</td>
-        <td>${getPersonById(el.currentSpouse)}</td>
-        <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
-        <td>${getPersonById(el.grandchildren)}</td>
-        <td>${getPersonById(el.siblings[0]) + "  " + getPersonById(el.siblings[1]) + "  " + getPersonById(el.siblings[2]) + "  " + getPersonById(el.siblings[3])}</td>
-    </tr>`
-})
-
-
-
-function getNewTable(){
-    let newTable= searchByHeightWeight();
-    document.getElementById("data").innerHTML = ''
-newTable.map(function(el){
-    document.getElementById("data").innerHTML += `<tr>
-        <td>${el.id}</td>
-        <td>${el.firstName}</td>
-        <td>${el.lastName}</td>
-        <td>${el.gender}</td>
-        <td>${el.dob}</td>
-        <td>${el.height}</td>
-        <td>${el.weight}</td>
-        <td>${el.eyeColor}</td>
-        <td>${el.occupation}</td>
-        <td>${getPersonById(el.parents[0]) + "  " + getPersonById(el.parents[1])}</td>
-        <td>${getPersonById(el.currentSpouse)}</td>
-        <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
-        <td>${getPersonById(el.grandchildren)}</td>
-        <td>${getPersonById(el.siblings[0]) + "  " + getPersonById(el.siblings[1]) + "  " + getPersonById(el.siblings[2]) + "  " + getPersonById(el.siblings[3])}</td>
-    </tr>`
-})
+//Function to clear tables
+function clearTable(table){
+    document.getElementById(table).innerHTML = ''
 }
 
 
+//Function to Generate Table 1 (Height/Weight)
+function heightTable(arrayInput){
+
+
+    arrayInput.map(function(el){
+        document.getElementById("data").innerHTML += `<tr>
+        <td>${el.id}</td>
+        <td>${el.firstName}</td>
+        <td>${el.lastName}</td>
+        <td>${el.gender}</td>
+        <td>${el.dob}</td>
+        <td>${el.height}</td>
+        <td>${el.weight}</td>
+        <td>${el.eyeColor}</td>
+        <td>${el.occupation}</td>
+        <td>${(el.parents)}</td>
+        <td>${(el.currentSpouse)}</td>
+        </tr>`
+    })
+
+}
+
+//Initial Generation of Table 1
+heightTable(people)
+
+//Updates Table 1 based on search results
+document.getElementById("button").onclick = function(){
+    clearTable("data");
+    let heightWeightArray = searchByHeightWeight()
+    heightTable(heightWeightArray);
+}
+
+
+
+
+//Returns an array of people matching the search criterea for DOB
 function searchByDob(){
     
     let dobInput = document.forms['dobForm']['dob'].value;
@@ -108,8 +107,12 @@ function searchByDob(){
     }
 }
 
-let birthdayTable = people.map(function(el){
-    document.getElementById("birthdayTable").innerHTML += `<tr>
+//Function to Generate Table 2 (Date of Birth)
+function birthdayTable(arrayInput){
+
+
+    arrayInput.map(function(el){
+        document.getElementById("birthdayTable").innerHTML += `<tr>
         <td>${el.id}</td>
         <td>${el.firstName}</td>
         <td>${el.lastName}</td>
@@ -119,41 +122,22 @@ let birthdayTable = people.map(function(el){
         <td>${el.weight}</td>
         <td>${el.eyeColor}</td>
         <td>${el.occupation}</td>
-        <td>${getPersonById(el.parents[0]) + "  " + getPersonById(el.parents[1])}</td>
-        <td>${getPersonById(el.currentSpouse)}</td>
-        <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
-        <td>${getPersonById(el.grandchildren)}</td>
-        <td>${getPersonById(el.siblings[0]) + "  " + getPersonById(el.siblings[1]) + "  " + getPersonById(el.siblings[2]) + "  " + getPersonById(el.siblings[3])}</td>
-    </tr>`
-})
-
-
-
-function getNewBirthdayTable(){
-    let newBirthdayTable= searchByDob();
-    document.getElementById("birthdayTable").innerHTML = ''
-newBirthdayTable.map(function(el){
-    document.getElementById("birthdayTable").innerHTML += `<tr>
-        <td>${el.id}</td>
-        <td>${el.firstName}</td>
-        <td>${el.lastName}</td>
-        <td>${el.gender}</td>
-        <td>${el.dob}</td>
-        <td>${el.height}</td>
-        <td>${el.weight}</td>
-        <td>${el.eyeColor}</td>
-        <td>${el.occupation}</td>
-        <td>${getPersonById(el.parents[0]) + "  " + getPersonById(el.parents[1])}</td>
-        <td>${getPersonById(el.currentSpouse)}</td>
-        <td>${getPersonById(el.children[0]) + "  " + getPersonById(el.children[1]) + "  " + getPersonById(el.children[2]) + "  " + getPersonById(el.children[3])}</td>
-        <td>${getPersonById(el.grandchildren)}</td>
-        <td>${getPersonById(el.siblings[0]) + "  " + getPersonById(el.siblings[1]) + "  " + getPersonById(el.siblings[2]) + "  " + getPersonById(el.siblings[3])}</td>
-    </tr>`
+        <td>${(el.parents)}</td>
+        <td>${(el.currentSpouse)}</td>
+        </tr>`
 })
 }
 
+//Initial generation of Table 2
+birthdayTable(people)
 
 
+//Updates Table 2 based on search results
+document.getElementById("dobButton").onclick = function(){
+    clearTable("birthdayTable");
+    let dobArray = searchByDob()
+    birthdayTable(dobArray);
+}
 
 
 

@@ -14,7 +14,6 @@ function getPersonById(idInput){
         }
     
     })
-    let namesArray = []
     if(foundPerson[0] !== undefined){
     return(foundPerson[0].firstName + " " + foundPerson[0].lastName)
     }
@@ -25,7 +24,7 @@ function getPersonById(idInput){
 
 
 
-
+//Function to find descendants
 function findDescendants(person, people, descendantsArray = []){
  
     people.map(function(el){
@@ -35,6 +34,19 @@ function findDescendants(person, people, descendantsArray = []){
         }
     })
     return descendantsArray;
+}
+
+//Function to find siblings
+function findSiblings(person, people, siblingArray = []){
+ 
+    people.map(function(el){
+        if(el.parents.includes(person.parents[0]) && (el.firstName != person.firstName)){
+            siblingArray.push(" " + el.firstName + " " + el.lastName)
+        }
+        
+    })
+    
+    return siblingArray;
 }
 
 
@@ -84,6 +96,7 @@ function makeTable(arrayInput, chosenTable){
         <td>${getPersonById(el.parents[0]) + " " + getPersonById(el.parents[1])}</td>
         <td>${getPersonById(el.currentSpouse)}</td>
         <td>${findDescendants(el, people)}</td>
+        <td>${findSiblings(el, people)}</td>
         </tr>`
     })
 

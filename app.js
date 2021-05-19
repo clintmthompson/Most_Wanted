@@ -14,14 +14,29 @@ function getPersonById(idInput){
         }
     
     })
-
+    let namesArray = []
     if(foundPerson[0] !== undefined){
-    return(foundPerson[0].firstName + " " + foundPerson[0].lastName + ",")
+    return(foundPerson[0].firstName + " " + foundPerson[0].lastName)
     }
     else{
         return(" ")
     }
 }
+
+
+
+
+function findDescendants(person, people, descendantsArray = []){
+ 
+    people.map(function(el){
+        if(el.parents.includes(person.id)){
+            descendantsArray.push(" " + el.firstName + " " + el.lastName)
+            findDescendants(el, people, descendantsArray)
+        }
+    })
+    return descendantsArray;
+}
+
 
 
 //Returns an array of people matching the search criterea for height/weight
@@ -51,7 +66,7 @@ function clearTable(table){
 }
 
 
-//Function to Generate Table 1 (Height/Weight)
+//Function to Generate Tables
 function makeTable(arrayInput, chosenTable){
 
 
@@ -66,8 +81,9 @@ function makeTable(arrayInput, chosenTable){
         <td>${el.weight}</td>
         <td>${el.eyeColor}</td>
         <td>${el.occupation}</td>
-        <td>${(el.parents)}</td>
-        <td>${(el.currentSpouse)}</td>
+        <td>${getPersonById(el.parents[0]) + " " + getPersonById(el.parents[1])}</td>
+        <td>${getPersonById(el.currentSpouse)}</td>
+        <td>${findDescendants(el, people)}</td>
         </tr>`
     })
 
